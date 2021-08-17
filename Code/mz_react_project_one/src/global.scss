@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+$headerHeight: 70px;
+$navWidth: 324px;
+
+$fontMedium: 500;
+$fontSemiBold: 600;
+$fontBold: 700;
+
+$hueColor: 12;
+
+$firstColor: hsl($hueColor, 65%, 49%);
+$firstColorDark: hsl($hueColor, 65%, 24%);
+$firstColorDarken: hsl($hueColor, 64%, 10%);
+$textColor: hsl($hueColor, 16%, 28%);
+$firstColorLight: hsl($hueColor, 9%, 91%);
+$firstColorLightScrollbar: hsl($hueColor, 50%, 50%);
+$firstColorLighten: hsl($hueColor, 100%, 99%);
+$generalBackgroundColor: #fff;
+$generalSwiperColor: #fff;
+$scrollBarColor: hsl($hueColor, 12%, 90%);
+$scrollThumbColor: hsl($hueColor, 12%, 80%);
+
+$bodyFont: "poppins", sans-serif;
+$h1FontSize: 1.5rem;
+$h2FontSize: 1.25rem;
+$h3FontSize: 1rem;
+$normalFontSize: 0.983rem;
+$smallFontSize: 0.813rem;
+$smallerFontSize: 0.75rem;
+
+$mb1: 0.5rem;
+$mb2: 1rem;
+$mb3: 1.5rem;
+$mb4: 2rem;
+$mb5: 2.5rem;
+
+$zTooltip: 10;
+$zFixed: 100;
+
+// @media screen and (min-width: 768px) {
+//   :root {
+//     $h1FontSize: 2.25rem;
+//     $h2FontSize: 1.5rem;
+//     $h3FontSize: 1.25rem;
+//     $normalFontSize: 1rem;
+//     $smallFontSize: 0.875rem;
+//     $smallerFontSize: 0.813rem;
+//   }
+// }
+
+// *,
+// ::before,
+// ::after {
+//   box-sizing: border-box;
+// }
+
+// body {
+//   margin: var($headerHeight) 0 0 0;
+//   font-family: var($bodyFont);
+//   font-size: var($normalFontSize);
+//   font-weight: var($fontMedium);
+//   background-color: var($firstColorLighten);
+//   color: var($textColor);
+//   line-height: 1.6;
+// }
+
+// h1,
+// h2,
+// h3,
+// p {
+//   margin: 0;
+// }
+
+$mainColor: hsl($hueColor, 65%, 49%);
+
+$width: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}

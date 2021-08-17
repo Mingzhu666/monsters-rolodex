@@ -1,0 +1,44 @@
+@import "../../global.scss";
+
+.menu {
+  // width: 100%;
+  height: $headerHeight;
+  background-color: $firstColorLighten;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: 2;
+  display: flex;
+  transition: all 1s ease;
+
+  @include mobile {
+    width: 300px;
+    height: 100vh;
+    left: -300px;
+    background-color: $firstColorDark;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.active {
+    left: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 10px;
+    font-weight: $fontMedium;
+    color: $firstColorLighten;
+    // width: 60%;
+    display: flex;
+
+    @include mobile {
+      width: 60%;
+      flex-direction: column;
+    }
+  }
+}

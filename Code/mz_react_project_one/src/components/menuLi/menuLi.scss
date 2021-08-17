@@ -1,0 +1,29 @@
+@import "../../global.scss";
+
+li {
+  margin: 10px;
+  padding: 0 3px;
+
+  @include mobile {
+    margin-bottom: 25px;
+    padding: 0;
+  }
+
+  a {
+    font-size: $h1FontSize;
+    font-weight: $fontBold;
+    color: $firstColorDark;
+    text-decoration: none;
+
+    @include mobile {
+      // font-size: 30px;
+      color: $firstColorLighten;
+    }
+
+    &:hover {
+      // color: $textColor;
+      color: $firstColor;
+      // font-weight: 700;
+    }
+  }
+}
