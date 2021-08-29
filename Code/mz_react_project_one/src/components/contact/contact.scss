@@ -3,105 +3,169 @@
 .contact {
   background-color: $generalBackgroundColor;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  @include mobile {
-    flex-direction: column;
-  }
-
-  .left {
-    padding: 0 10px;
-    flex: 0.4;
-    overflow: hidden;
+  .top {
     display: flex;
-    flex-direction: column;
-    // align-items: center;
-
-    .googleMap {
-      margin-top: $headerHeight;
-    }
-
-    .contactInfo {
-      margin-top: 6px;
-
-      .contactSubtitle {
-        font-size: $h2FontSize;
-        color: $firstColorDark;
-        /* margin-bottom: var(--mb-1); */
-      }
-
-      span {
-        padding: 3px;
-        display: block;
-        padding-left: 1rem;
-        color: $textColor;
-      }
-    }
-
-    // img {
-    //   height: 100%;
-    // }
-  }
-  .right {
-    flex: 0.61;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    flex: 0.7;
 
-    h2 {
-      font-size: 30px;
-      color: $firstColor;
-    }
-
-    form {
-      width: 70%;
-      height: 70%;
+    .left {
+      padding: 0 20px;
+      flex: 0.4;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-
-      input {
-        width: 300px;
-        height: 30px;
-        font-size: 14px;
-
-        @include mobile {
-          width: 200px;
-          height: 20px;
-        }
+      // align-items: center;
+      @include mobile {
+        flex: 0.3;
       }
 
-      textarea {
-        width: 300px;
+      .googleMap {
+        margin-top: $headerHeight;
+        width: 100%;
         height: 200px;
-        font-size: 14px;
-        resize: none;
 
         @include mobile {
-          width: 200px;
           height: 100px;
         }
       }
 
-      button {
-        width: 150px;
-        height: 30px;
-        color: white;
-        background-color: crimson;
-        border: none;
-        border-radius: 10px;
-        font-weight: 500;
-        cursor: pointer;
+      .contactInfo {
+        margin-top: 15px;
 
-        &:focus {
-          outline: none;
+        @include mobile {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .contactSubtitle {
+          font-size: $h2FontSize;
+          color: $firstColorDark;
+          /* margin-bottom: var(--mb-1); */
+        }
+
+        span {
+          padding: 3px;
+          display: block;
+          padding-left: 1rem;
+          color: $textColor;
         }
       }
 
-      span {
-        // color: green;
+      // img {
+      //   height: 100%;
+      // }
+    }
+
+    .right {
+      flex: 0.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @include mobile {
+        flex: 0.5;
+      }
+
+      h2 {
+        font-size: 30px;
+        color: $firstColor;
+        margin-bottom: 30px;
+
+        @include mobile {
+          display: flex;
+          margin: 0;
+        }
+      }
+
+      form {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        // input {
+        //   width: 300px;
+        //   height: 30px;
+        //   font-size: 14px;
+
+        //   @include mobile {
+        //     width: 200px;
+        //     height: 20px;
+        //   }
+        // }
+
+        .contactInputs {
+          width: 90%;
+          padding: 1rem;
+          outline: none;
+          border: none;
+          background-color: $firstColorLight;
+          font-size: $normalFontSize;
+          margin-bottom: $mb2;
+          border-radius: 0.5rem;
+
+          &::placeholder {
+            color: $firstColorDark;
+            font-family: $bodyFont;
+            font-weight: $fontMedium;
+          }
+        }
+
+        textarea {
+          width: 300px;
+          height: 200px;
+          font-size: 14px;
+          resize: none;
+
+          @include mobile {
+            width: 200px;
+            height: 100px;
+          }
+        }
+
+        button {
+          padding: 12px;
+          outline: none;
+          border: none;
+          background-color: $firstColor;
+          font-family: $bodyFont;
+          font-size: $normalFontSize;
+          font-weight: $fontSemiBold;
+          border-radius: 0.5rem;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $firstColorDark;
+            color: $firstColorLight;
+          }
+        }
+
+        // button {
+        //   width: 150px;
+        //   height: 30px;
+        //   color: white;
+        //   background-color: crimson;
+        //   border: none;
+        //   border-radius: 10px;
+        //   font-weight: 500;
+        //   cursor: pointer;
+
+        //   &:focus {
+        //     outline: none;
+        //   }
+        // }
       }
     }
+  }
+
+  .bottom {
+    flex: 0.3;
   }
 }

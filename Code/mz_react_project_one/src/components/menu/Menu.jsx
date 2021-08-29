@@ -1,5 +1,5 @@
-import MenuLi from "../menuLi/MenuLi"
 import "./menu.scss"
+import MenuLi from "../menuLi/MenuLi"
 
 export default function Menu({menuOpen, setMenuOpen}) {
     const list = [
